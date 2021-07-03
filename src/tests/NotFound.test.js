@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import NotFound from '../components/NotFound';
 
-describe('Teste o componente <About.js /', () => {
+describe('Teste o componente NotFound.js /', () => {
   it('Teste se a página contém um heading h2 com o texto About Pokédex', () => {
     const { container, getByText } = render(<NotFound />);
     const h2NotFound = container.querySelector('h2');
