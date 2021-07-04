@@ -1,5 +1,4 @@
 import React from 'react';
-// import userEvent from '@testing-library/user-event';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../renderWithRouter';
 import Pokemon from '../components/Pokemon';
