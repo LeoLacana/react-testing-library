@@ -56,12 +56,19 @@ describe('Teste do componente PokemonDetails', () => {
     });
   });
 
-  it('', () => {
-    const { getByText } = renderWithRouter(<App />);
+  it('Testar se o checkbox de favorito funciona habilitando e desabilitando', () => {
+    const { getByText, getByRole } = renderWithRouter(<App />);
     const linkDetails = getByText(textMoreDetails);
     userEvent.click(linkDetails);
 
     const textLabel = getByText('Pokémon favoritado?');
+    const checkboxButton = getByRole('checkbox');
+
+    expect(checkboxButton).not.toBeChecked();
+    userEvent.click(checkboxButton);
+    expect(checkboxButton).toBeChecked();
+    userEvent.click(checkboxButton);
+    expect(checkboxButton).not.toBeChecked();
 
     expect(textLabel.textContent).toBe('Pokémon favoritado?');
   });
