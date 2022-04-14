@@ -1,4 +1,4 @@
-## Projet React Testing Library
+# Projet React Testing Library
 
 Escrito testes para uma aplicação React.
 
